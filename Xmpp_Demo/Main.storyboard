@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="b23-2d-amy">
+            <objects>
+                <viewController storyboardIdentifier="root" id="ca3-jK-c9i" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9kz-6Y-sJl"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Z9-Nx-rMX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQI-wE-xRC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbB-r8-D4e">
+                                <rect key="frame" x="28" y="37" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="login:" destination="ca3-jK-c9i" eventType="touchUpInside" id="epA-Nc-Phi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-Eq-UTg">
+                                <rect key="frame" x="300" y="37" width="300" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="IX4-kC-lOr"/>
+                                    <constraint firstAttribute="height" constant="128" id="u4w-yP-Rfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IX4-kC-lOr"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eC-bH-Bdg">
+                                <rect key="frame" x="21" y="86" width="45" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="c3L-eE-pON"/>
+                                </constraints>
+                                <state key="normal" title="发消息"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="ca3-jK-c9i" eventType="touchUpInside" id="iJF-d8-mR0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="对象的JID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-PQ-EeC">
+                                <rect key="frame" x="76" y="86" width="214" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="jlK-qD-XgM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jlK-qD-XgM"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-Pn-zSo">
+                                <rect key="frame" x="21" y="219" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="销毁房间"/>
+                                <connections>
+                                    <action selector="destoryRoom:" destination="ca3-jK-c9i" eventType="touchUpInside" id="IvH-5W-K3b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-Zj-Gzj">
+                                <rect key="frame" x="21" y="181" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="创建房间"/>
+                                <connections>
+                                    <action selector="creatRoom:" destination="ca3-jK-c9i" eventType="touchUpInside" id="jzT-bw-ZDU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFl-6x-RqN">
+                                <rect key="frame" x="20" y="265" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="邀请加入房间"/>
+                                <connections>
+                                    <action selector="inviteToRoom:" destination="ca3-jK-c9i" eventType="touchUpInside" id="PDI-9i-1FR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V03-nH-nMd">
+                                <rect key="frame" x="21" y="317" width="105" height="30"/>
+                                <animations/>
+                                <state key="normal" title="向房间发送消息"/>
+                                <connections>
+                                    <action selector="sendMessageToRoom:" destination="ca3-jK-c9i" eventType="touchUpInside" id="gtc-gC-sgg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.94857336796709157" green="1" blue="0.5401629748027913" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5eC-bH-Bdg" firstAttribute="centerY" secondItem="Iaz-Eq-UTg" secondAttribute="centerY" id="2Z7-m4-4m7"/>
+                            <constraint firstItem="ga1-PQ-EeC" firstAttribute="centerY" secondItem="5eC-bH-Bdg" secondAttribute="centerY" id="3IG-he-oNk"/>
+                            <constraint firstItem="5eC-bH-Bdg" firstAttribute="top" secondItem="lbB-r8-D4e" secondAttribute="bottom" constant="19" id="5rd-ik-y2s"/>
+                            <constraint firstItem="5eC-bH-Bdg" firstAttribute="centerX" secondItem="lbB-r8-D4e" secondAttribute="centerX" id="AsE-Mm-Icm"/>
+                            <constraint firstItem="5eC-bH-Bdg" firstAttribute="top" secondItem="ga1-PQ-EeC" secondAttribute="top" id="DAM-37-cwp"/>
+                            <constraint firstItem="ga1-PQ-EeC" firstAttribute="leading" secondItem="5eC-bH-Bdg" secondAttribute="trailing" constant="10" id="DcV-Or-AOO"/>
+                            <constraint firstItem="Iaz-Eq-UTg" firstAttribute="top" secondItem="9kz-6Y-sJl" secondAttribute="bottom" constant="17" id="GAH-r7-Ceg"/>
+                            <constraint firstItem="lbB-r8-D4e" firstAttribute="top" secondItem="9kz-6Y-sJl" secondAttribute="bottom" constant="17" id="Hf3-3P-a4b"/>
+                            <constraint firstItem="5eC-bH-Bdg" firstAttribute="leading" secondItem="gQI-wE-xRC" secondAttribute="leadingMargin" constant="1" id="MVz-Zu-mUt"/>
+                            <constraint firstItem="lbB-r8-D4e" firstAttribute="leading" secondItem="gQI-wE-xRC" secondAttribute="leadingMargin" constant="8" id="Os3-n1-Cgd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iaz-Eq-UTg" secondAttribute="trailing" constant="-20" id="W1c-6s-mng"/>
+                            <constraint firstItem="Iaz-Eq-UTg" firstAttribute="width" secondItem="gQI-wE-xRC" secondAttribute="width" multiplier="0.5" id="qaK-db-khL"/>
+                            <constraint firstItem="Iaz-Eq-UTg" firstAttribute="leading" secondItem="ga1-PQ-EeC" secondAttribute="trailing" constant="10" id="uXX-Bs-b4U"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DAM-37-cwp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Iaz-Eq-UTg" id="MAY-3d-0Bf"/>
+                        <outlet property="to" destination="ga1-PQ-EeC" id="3Ij-Io-ivK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlA-Va-tXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="327"/>
+        </scene>
+    </scenes>
+</document>
